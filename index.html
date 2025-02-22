@@ -6,10 +6,12 @@
 </head>
 <body>
    <div id="head">
+     
       <h3>CALCULATOR</h3>
    </div>
    <div id="calc">
       <div id="content">
+         <img src="sun.png" alt="" id="icon">
          <form>
             <div id="output">
                <input type="text" id='res'>
@@ -43,6 +45,90 @@
          </form>
       </div>
    </div>
+  <div class="calculation-tool">
+   <header>
+      <h1>Calculation Tools</h1>
+    </header>
+  
+    <main>
+      <!-- BMI Calculator -->
+      <section>
+        <h2>BMI Calculator</h2>
+        <label for="height">Height (cm):</label>
+        <input type="number" id="height" placeholder="Enter height in cm">
+        <label for="weight">Weight (kg):</label>
+        <input type="number" id="weight" placeholder="Enter weight in kg">
+        <button onclick="calculateBMI()">Calculate BMI</button>
+        <p id="bmiResult"></p>
+      </section>
+  
+      <!-- Currency Converter -->
+      <section>
+        <h2>Currency Converter</h2>
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" placeholder="Enter amount">
+        <label for="fromCurrency">From:</label>
+        <select id="fromCurrency">
+          <option value="INR">INR</option>
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+        </select>
+        <label for="toCurrency">To:</label>
+        <select id="toCurrency">
+          <option value="INR">INR</option>
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+        </select>
+        <button onclick="convertCurrency()">Convert</button>
+        <p id="currencyResult"></p>
+      </section>
+  
+      <!-- Weight Converter -->
+      <section>
+        <h2>Weight Converter</h2>
+        <label for="weightInput">Weight:</label>
+        <input type="number" id="weightInput" placeholder="Enter weight">
+        <label for="fromUnit">From:</label>
+        <select id="fromUnit">
+          <option value="kg">Kilograms (kg)</option>
+          <option value="lbs">Pounds (lbs)</option>
+        </select>
+        <label for="toUnit">To:</label>
+        <select id="toUnit">
+          <option value="kg">Kilograms (kg)</option>
+          <option value="lbs">Pounds (lbs)</option>
+        </select>
+        <button onclick="convertWeight()">Convert</button>
+        <p id="weightResult"></p>
+      </section>
+  
+      <!-- Size Calculation -->
+      <section>
+        <h2>Size Calculation</h2>
+        <label for="length">Length (cm):</label>
+        <input type="number" id="length" placeholder="Enter length">
+        <label for="width">Width (cm):</label>
+        <input type="number" id="width" placeholder="Enter width">
+        <button onclick="calculateSize()">Calculate Area</button>
+        <p id="sizeResult"></p>
+      </section>
+    </main>
+  
+    <footer>
+      <p>&copy; 2023 Calculation. All rights reserved.</p>
+    </footer>
+  </div>
+   <script>
+      var icon = document.getElementById("icon");
+      icon.onclick = function(){
+          document.body.classList.toggle("light-theme");
+          if(document.body.classList.contains("light-theme")){
+              icon.src ="moon.png"; 
+          }else{
+              icon.src="sun.png";
+          }
+      }
+  </script>
    <script src='script.js'></script>
 </body>
 </html>

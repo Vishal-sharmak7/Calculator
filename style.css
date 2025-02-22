@@ -1,12 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+:root{
+    --main-color:black;
+    --secondary-color:white;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Bebas Neue", serif;
    
 }
+#icon{
+    width: 30px;
+    cursor: pointer;
+    margin-left: 16rem;
+}
+.dark-theme{
+    --main-color:rgb(0, 0, 0);
+    --secondary-color:white;
+}
+.light-theme{
+    --main-color:rgb(255, 255, 255);
+    --secondary-color:rgb(0, 0, 0);
+}
+
 #head{
-    color:white;
-    background-color: black;
+    color:var(--secondary-color);
+    background-color:var(--main-color);
     text-align: center;
     font-size: 4rem;
     padding: 11px;
@@ -17,13 +38,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #000000;
+    background-color:var(--main-color);
 }
 #content {
-    background: #000000;
+    background: var(--main-color);
     padding: 11px;
     border-radius: 10px;
-    box-shadow: 0 0 10px white;
+    box-shadow: 0 0 10px var(--secondary-color);
 
 }
 #content form input {
@@ -38,7 +59,7 @@
     cursor: pointer;
     transition: 0.3s;
     opacity: 100%;
-    color: black;
+    color:black;
 }
 
 #content form input:hover{
@@ -48,7 +69,7 @@
 #backspace {
     background-color: rgb(237, 89, 30);
     box-shadow: 0 0 5px rgb(255, 255, 255);
-    color: white;
+    color: var(--secondary-color);
 }
 #res {
     padding: 10px;
@@ -56,7 +77,7 @@
 #clear {
     background-color: rgb(237, 89, 30);
     box-shadow: 0 0 5px rgb(255, 255, 255);
-    color: white;
+    color: var(--secondary-color);
 }
 form #output {
     display: flex;
@@ -68,3 +89,69 @@ form #output input {
     flex: 1;
     font-size: 25px;
 }
+
+.calculation-tool{
+    background-color: var(--main-color);
+}
+
+header {
+    background-color:var(--main-color);
+    color: var(--secondary-color);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: var(--main-color);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color:rgb(255, 255, 255)
+  }
+  
+  h2 {
+    color: var(--secondary-color);
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  label {
+    color: var(--secondary-color);
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input, select, button {
+    margin-bottom: 10px;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 10px;
+  }
+  
+  button {
+    background-color:var(--secondary-color);
+    color: var(--main-color);
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: rgba(91, 204, 236, 0.804);
+  }
+  
+  footer {
+    background-color: #ffffff;
+    color: var(--main-color);
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+  }

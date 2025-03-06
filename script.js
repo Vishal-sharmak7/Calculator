@@ -1,3 +1,30 @@
+let day;
+switch (new Date().getDay()) {
+  case 0:
+    day = "Sunday";
+    break;
+  case 1:
+    day = "Monday";
+    break;
+  case 2:
+    day = "Tuesday";
+    break;
+  case 3:
+    day = "Wednesday";
+    break;
+  case 4:
+    day = "Thursday";
+    break;
+  case 5:
+    day = "Friday";
+    break;
+  case  6:
+    day = "Saturday";
+}
+document.getElementById("date").innerHTML = "Today is " + day;
+
+
+//calculator
 function Solve(val) {
     var v = document.getElementById('res');
     v.value += val;
@@ -40,7 +67,7 @@ function calculateBMI() {
    const weight = parseFloat(document.getElementById('weight').value);
  
    if (isNaN(height) || isNaN(weight) || height <= 0 || weight <= 0) {
-     document.getElementById('bmiResult').textContent = "Please enter valid values.";
+     document.getElementById('Result').textContent = "Please enter valid values.";
      return;
    }
  
@@ -57,7 +84,7 @@ function calculateBMI() {
      bmiCategory = "Obesity";
    }
  
-   document.getElementById('bmiResult').innerHTML = `
+   document.getElementById('Result').innerHTML = `
      Your BMI is: <strong>${bmi}</strong><br>
      Category: <strong>${bmiCategory}</strong>
    `;
@@ -74,11 +101,11 @@ function calculateBMI() {
      EUR: { USD: 1.18, EUR: 1, INR: 90.58 }
    };
    if (isNaN(amount)) {
-     document.getElementById('currencyResult').textContent = "Please enter a valid amount.";
+     document.getElementById('Result1').textContent = "Please enter a valid amount.";
      return;
    }
    const convertedAmount = (amount * exchangeRates[fromCurrency][toCurrency]).toFixed(2);
-   document.getElementById('currencyResult').textContent = `${amount} ${fromCurrency} = ${convertedAmount} ${toCurrency}`;
+   document.getElementById('Result1').textContent = `${amount} ${fromCurrency} = ${convertedAmount} ${toCurrency}`;
  }
  
  // Weight Converter
@@ -91,11 +118,11 @@ function calculateBMI() {
      lbs: { kg: 0.453592, lbs: 1 }
    };
    if (isNaN(weight)) {
-     document.getElementById('weightResult').textContent = "Please enter a valid weight.";
+     document.getElementById('Result2').textContent = "Please enter a valid weight.";
      return;
    }
    const convertedWeight = (weight * conversionRates[fromUnit][toUnit]).toFixed(2);
-   document.getElementById('weightResult').textContent = `${weight} ${fromUnit} = ${convertedWeight} ${toUnit}`;
+   document.getElementById('Result2').textContent = `${weight} ${fromUnit} = ${convertedWeight} ${toUnit}`;
  }
  
  // Size Calculation
@@ -103,9 +130,9 @@ function calculateBMI() {
    const length = parseFloat(document.getElementById('length').value);
    const width = parseFloat(document.getElementById('width').value);
    if (isNaN(length) || isNaN(width)) {
-     document.getElementById('sizeResult').textContent = "Please enter valid values.";
+     document.getElementById('Result3').textContent = "Please enter valid values.";
      return;
    }
    const area = (length * width).toFixed(2);
-   document.getElementById('sizeResult').textContent = `Area: ${area} cm²`;
+   document.getElementById('Result3').textContent = `Area: ${area} cm²`;
  }

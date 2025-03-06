@@ -8,6 +8,7 @@
    <div id="head">
      
       <h3>CALCULATOR</h3>
+      <p id="date"></p>
    </div>
    <div id="calc">
       <div id="content">
@@ -59,7 +60,7 @@
         <label for="weight">Weight (kg):</label>
         <input type="number" id="weight" placeholder="Enter weight in kg">
         <button onclick="calculateBMI()">Calculate BMI</button>
-        <p id="bmiResult"></p>
+        <p id="Result" class="Result"></p>
       </section>
   
       <!-- Currency Converter -->
@@ -80,7 +81,7 @@
           <option value="EUR">EUR</option>
         </select>
         <button onclick="convertCurrency()">Convert</button>
-        <p id="currencyResult"></p>
+        <p id="Result1" class="Result"></p>
       </section>
   
       <!-- Weight Converter -->
@@ -99,7 +100,7 @@
           <option value="lbs">Pounds (lbs)</option>
         </select>
         <button onclick="convertWeight()">Convert</button>
-        <p id="weightResult"></p>
+        <p id="Result2" class="Result"></p>
       </section>
   
       <!-- Size Calculation -->
@@ -110,7 +111,7 @@
         <label for="width">Width (cm):</label>
         <input type="number" id="width" placeholder="Enter width">
         <button onclick="calculateSize()">Calculate Area</button>
-        <p id="sizeResult"></p>
+        <p id="Result3" class="Result"></p>
       </section>
     </main>
   

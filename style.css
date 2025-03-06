@@ -32,9 +32,13 @@
     font-size: 4rem;
     padding: 11px;
 }
+
+#head p{
+  font-size: 2rem;
+}
 #calc {
     width: 100%;
-    height: 90vh;
+    height: 76vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -154,4 +158,8 @@ header {
     padding: 10px;
     bottom: 0;
     width: 100%;
+  }
+
+  .Result{
+    color: var(--secondary-color);
   }
